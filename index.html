@@ -25,29 +25,65 @@
         </div>
       </div>
     </nav>
-    <main class="container mt-5">
-      <h1 id="titulo">Verificador de idade</h1>
+   <main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
 
-      <form id="formulario">
-        <div class="mb-3">
-          <label for="nome" class="form-label"> Nome: </label>
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
 
-          <input type="text" id="nome" class="form-control" />
+          <h1 class="h3 mb-3">Simulador de Orçamento</h1>
+
+          <form id="formulario" novalidate>
+
+            <div class="mb-3">
+              <label for="nome" class="form-label">
+                Nome do cliente
+              </label>
+              <input
+                type="text"
+                id="nome"
+                class="form-control"
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="servico" class="form-label">
+                Serviço
+              </label>
+              <select id="servico" class="form-select">
+                <option value="120">Formatação — R$ 120</option>
+                <option value="80">Limpeza — R$ 80</option>
+                <option value="50">Instalação — R$ 50</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="quantidade" class="form-label">
+                Quantidade
+              </label>
+              <input
+                type="number"
+                id="quantidade"
+                class="form-control"
+                min="1"
+                step="1"
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Calcular orçamento
+            </button>
+          </form>
+
+          <div id="resultado" class="alert d-none mt-3" role="alert"></div>
+
         </div>
+      </div>
 
-        <div class="mb-3">
-          <label for="idade" class="form-label"> Idade: </label>
-
-          <input type="number" id="idade" class="form-control" />
-        </div>
-
-        <button id="botao" type="submit" class="btn btn-primary">
-          Verificar
-        </button>
-      </form>
-
-      <p id="resultado" class="alert d-none mt-3"></p>
-    </main>
+    </div>
+  </div>
+</main>
 
     <script src="js/script.js"></script>
     <script
@@ -56,4 +92,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
+</html>
 </html>
